@@ -1,9 +1,14 @@
 import os
+import sys
 from datetime import date, timedelta
+from pathlib import Path
 
 import streamlit as st
 from dotenv import load_dotenv
 from sqlalchemy import select
+
+# Streamlit Cloud executes this file directly, so add the repository root for app imports.
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 from app.api_clients.sam_gov import SamGovClient
 from app.api_clients.usa_spending import USASpendingClient
