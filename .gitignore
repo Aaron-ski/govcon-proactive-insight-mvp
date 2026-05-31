@@ -1,0 +1,8 @@
+.env
+.venv/
+.tools/
+__pycache__/
+.pytest_cache/
+*.pyc
+*.db
+data/exports/*.csv
